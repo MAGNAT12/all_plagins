@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GRND.GG | Жалобы",
+  "version": "3.5",
+  "description": "Добавляйте, редактируйте и управляйте шаблонами ответов. Больше никаких лишних движений — все под рукой! 🚀",
+  "author": "Magnat",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "file:///*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
